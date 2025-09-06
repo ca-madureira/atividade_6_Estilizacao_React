@@ -1,0 +1,51 @@
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+.skeleton__text {
+    height: 1rem;
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.skeleton__title {
+    width: 80%;
+}
+
+.skeleton__price {
+    width: 40%;
+}
+
+.skeleton__button {
+    height: 2.5rem;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
