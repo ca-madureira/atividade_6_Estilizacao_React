@@ -26,7 +26,7 @@ export const products = [
     {
         name: "Headset 4",
         price: "250,00",
-        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D",
+        image: "https://images.unsplash.com/photo-1545127398-14699f92334b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYWRzZXR8ZW58MHx8MHx8fDA%3D",
         rating: 3.8,
         tag: "Promo",
         variant: "solid"
