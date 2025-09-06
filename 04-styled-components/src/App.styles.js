@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: ${props => props.theme.spacing.md};
+  padding: ${props => props.theme.spacing.md};
+  margin-top: 80px;
 
   @media screen and (min-width: 481px) {
     grid-template-columns: repeat(2, 1fr);

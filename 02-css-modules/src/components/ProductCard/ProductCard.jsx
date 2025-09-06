@@ -1,4 +1,5 @@
 import styles from './ProductCard.module.css';
+import Button from '../Button/Button';
 
 export const ProductCard = ({ product }) => {
     const { image, name, price, rating, tag, variant = 'solid' } = product;
@@ -25,9 +26,7 @@ export const ProductCard = ({ product }) => {
                 )}
             </div>
 
-            <button className={`${styles.button} ${styles[`button${variant.charAt(0).toUpperCase() + variant.slice(1)}`]}`}>
-                Adicionar ao Carrinho
-            </button>
+            <Button variant={variant}>Adicionar ao Carrinho</Button>
         </article>
     );
 };

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { useEffect, useState } from "react";
 import { Navbar } from './components/Navbar/Navbar';
 import { ProductCard } from './components/ProductCard/ProductCard';
@@ -16,7 +16,7 @@ function App() {
   return (
     <main>
       <Navbar cartCount={2} />
-      <section className='container' aria-label="Lista de produtos">
+      <section className={styles.container} aria-label="Lista de produtos">
         {loading
           ? Array.from({ length: 6 }).map((_, i) => <Skeleton key={i} />)
           : products.map(product => <ProductCard key={product.id} product={product} />)

@@ -7,6 +7,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 1rem;
     transition: transform 0.3s ease;
+    margin-top: 5rem;
 }
 
 .product:hover {
@@ -74,63 +75,4 @@
 .product__rating {
     font-size: 0.9rem;
     color: #f59e0b;
-}
-
-.product__button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
-}
-
-
-.product__button--solid {
-    background-color: #000;
-    color: #fff;
-}
-
-.product__button--solid:hover {
-    background-color: #333;
-}
-
-.product__button--outline {
-    background-color: transparent;
-    color: #000;
-    border-color: #000;
-}
-
-.product__button--outline:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-.product__button--ghost {
-    background-color: transparent;
-    color: #000;
-}
-
-.product__button--ghost:hover {
-    background-color: #f0f0f0;
-}
-
-.product__button:focus {
-    outline: 2px solid #5c3d99;
-    outline-offset: 2px;
-}
-
-.product__button:disabled {
-    background-color: #ccc;
-    color: #666;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.product__button--loading {
-    position: relative;
-    pointer-events: none;
-    opacity: 0.7;
 }

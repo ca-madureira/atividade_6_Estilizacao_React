@@ -1,99 +1,93 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-export const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  body.theme-light {
-    background-color: #f9f9f9;
-    color: #222;
-  }
-
-  body.theme-dark {
-    background-color: #1a1a1a;
-    color: #eee;
-  }
-
-  body.theme-dark header {
-    background-color: #2a2a2a;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  }
-`;
-
+import styled from "styled-components";
 export const NavbarWrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: ${props => props.theme.colors.surface};
+  box-shadow: ${props => props.theme.shadows.small};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: ${props => props.theme.spacing.md} ${props => props.theme.spacing.lg};
+  transition: all 0.2s ease;
 `;
 
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${props => props.theme.spacing.sm};
   font-weight: 600;
-  color: blueviolet;
+  color: ${props => props.theme.colors.primary};
   font-size: 1.2rem;
 `;
 
 export const Title = styled.span`
-  color: rgb(80, 82, 79);
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Actions = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: ${props => props.theme.spacing.md};
 `;
 
 export const ThemeToggle = styled.button`
-  color: rgb(63, 35, 61);
-  padding: 0.4rem 0.8rem;
+  color: ${props => props.theme.colors.text};
+  padding: ${props => props.theme.spacing.sm};
   border: none;
-  border-radius: 0.3rem;
-  font-size: 1rem;
+  border-radius: ${props => props.theme.radii.md};
+  font-size: 1.2rem;
   cursor: pointer;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    background-color: rgb(166, 121, 207);
+    background-color: ${props => props.theme.colors.border};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${props => props.theme.colors.primary};
+    outline-offset: 2px;
   }
 `;
 
 export const Cart = styled.div`
   position: relative;
   font-size: 1.5rem;
-  color: rgb(226, 80, 43);
+  color: ${props => props.theme.colors.text};
   cursor: pointer;
+  padding: ${props => props.theme.spacing.sm};
+  border-radius: ${props => props.theme.radii.md};
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    background-color: rgb(218, 166, 166);
-    border-radius: 0.3rem;
-    padding: 0.2rem;
+    background-color: ${props => props.theme.colors.border};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${props => props.theme.colors.primary};
+    outline-offset: 2px;
   }
 `;
 
 export const CartBadge = styled.span`
   position: absolute;
-  top: -6px;
-  right: -10px;
-  background-color: crimson;
+  top: -4px;
+  right: -4px;
+  background-color: ${props => props.theme.colors.danger};
   color: white;
   font-size: 0.7rem;
   font-weight: bold;
   padding: 2px 6px;
-  border-radius: 999px;
+  border-radius: ${props => props.theme.radii.full};
+  min-width: 18px;
+  text-align: center;
 `;

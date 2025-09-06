@@ -1,4 +1,5 @@
 .product {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -76,60 +77,24 @@
     color: #f59e0b;
 }
 
-.button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
+:global(.product) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.buttonSolid {
-    background-color: #000;
-    color: #fff;
+:global(body.theme-dark) .product {
+    background-color: #2a2a2a;
+    color: #eee;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
 }
 
-.buttonSolid:hover {
-    background-color: #333;
-}
-
-.buttonOutline {
-    background-color: transparent;
-    color: #000;
-    border-color: #000;
-}
-
-.buttonOutline:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-.buttonGhost {
-    background-color: transparent;
-    color: #000;
-}
-
-.buttonGhost:hover {
-    background-color: #f0f0f0;
-}
-
-.button:focus {
-    outline: 2px solid #5c3d99;
-    outline-offset: 2px;
-}
-
-.button:disabled {
-    background-color: #ccc;
-    color: #666;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.buttonLoading {
-    position: relative;
-    pointer-events: none;
-    opacity: 0.7;
+:global(body.theme-dark) .price,
+:global(body.theme-dark) .title {
+    color: white;
 }

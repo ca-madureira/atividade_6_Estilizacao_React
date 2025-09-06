@@ -8,8 +8,16 @@ export const Navbar = ({ cartCount = 0 }) => {
         return localStorage.getItem('theme') === 'dark';
     });
 
+
     useEffect(() => {
-        document.body.className = dark ? 'theme-dark' : 'theme-light';
+        const root = document.documentElement;
+        if (dark) {
+            root.classList.add('dark');
+            document.body.className = 'theme-dark';
+        } else {
+            root.classList.remove('dark');
+            document.body.className = 'theme-light';
+        }
         localStorage.setItem('theme', dark ? 'dark' : 'light');
     }, [dark]);
 
